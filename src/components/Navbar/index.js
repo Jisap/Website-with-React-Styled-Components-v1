@@ -19,7 +19,7 @@ const Navbar = ({ toggle }) => {
     
     const changeNav = () => {
         if( window.scrollY >= 80 ){ // Retorna el número de píxeles que han sido desplazados en el documento mediante el scroll vertical.
-            setScrollNav( true );   // Si se desplazo en la vertical scrollNav toma el valor true 
+            setScrollNav( true );   // Si se desplazo en la vertical + de 80 px scrollNav toma el valor true 
         }else{ 
             setScrollNav( false );  // Sino se desplaza scrollNav toma el valor false
         }
@@ -55,7 +55,8 @@ const Navbar = ({ toggle }) => {
                                 spy={ true }
                                 exact='true'
                                 offset={ -80 }
-                                >About</NavLinks>
+                                >About
+                            </NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks to="discover"
